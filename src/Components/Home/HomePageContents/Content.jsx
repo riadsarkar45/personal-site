@@ -10,6 +10,10 @@ import emailjs from '@emailjs/browser';
 import PdfResume from "../../../assets/Tanvir_Sarkar_Riad.pdf"
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
 const Content = () => {
     const absolutePath = new URL('../../../assets/Tanvir_Sarkar_Riad.pdf', window.location.href).toString();
     const form = useRef();
@@ -29,7 +33,7 @@ const Content = () => {
         console.log(`Done after 5 loops!`)
     }
     return (
-        <div className="bg-cover bg-center" style={{ backgroundImage: 'url("https://i.ibb.co/9tTpcZn/13295064-5172658.jpg")' }}>
+        <div className="bg-cover bg-center mb-10 text-white" style={{ backgroundImage: 'url("https://i.ibb.co/9tTpcZn/13295064-5172658.jpg")' }}>
             <div className="w-[85%] m-auto">
                 <div className="bg-blue-500 rounded-lg bg-opacity-30 p-5 lg:flex lg:justify-between ">
                     <div>
@@ -174,80 +178,120 @@ const Content = () => {
                     <div>
                         <h2 className='text-3xl font-normal'>My Projects</h2>
                         <div className='md:flex lg:flex mt-6'>
-                            <div >
-                                <h2 className='text-3xl'>~~~ BD Job Hunting</h2>
-                                <p className='w-[80%]'>'BD Job Hunting' is a mern based project. User can manage his job accourding to his/her skills
-                                    and apply to the company website. Personalized dashboard for Employers and those people who are
-                                    looking for job. <Link>Live Link</Link>
-                                </p>
-                                <div className="badge badge-outline text-yellow-400 font-extrabold mt-5">Still Working On It</div>
-                                <div className='text-green-400 font-extrabold mt-7'>
-                                    <div className="badge badge-outline">ReactJs</div>
-                                    <div className="badge badge-outline">Firebase</div>
-                                    <div className="badge badge-outline">NodeJs</div>
-                                    <div className="badge badge-outline">ExpressJs</div>
-                                    <div className="badge badge-outline">MongoDB</div>
-                                    <div className="badge badge-outline">TailwindCss</div>
-                                    <div className="badge badge-outline">DaisyUI</div>
-                                    <div className="badge badge-outline">Material UI</div>
-                                </div>
-                                <div className="badge badge-outline text-purple-400 p-4 font-extrabold mt-5">Live Link</div>
-                            </div>
-                            <div>
-                                <img className='h-[87%]' src="https://i.ibb.co/Vm9L7HD/Final-Screenshot-2023-12-11-122550.png" alt="project1" />
-                            </div>
-                        </div>
-                        <div className='md:flex lg:flex mt-6'>
-                            <div>
-                                <img className='h-[87%] lg:w-[70%] md:w-[70%]' src="https://i.ibb.co/qFhn2Jt/Blood-Donation-Screenshot-2023-12-11-130504.png" alt="project1" />
-                            </div>
-                            <div >
-                                <h2 className='text-3xl'>Blood Donation Managment</h2>
-                                <p className='w-[80%]'>'Blood Donation Management' is a mern based project. Here user can post a blood donation request and get
-                                    response. And personalized dashboard for 'Admin and Donor'
-                                    looking for job. <Link>Live Link</Link>
-                                </p>
-                                <div className="badge badge-outline text-green-400 font-extrabold mt-5">Completed</div>
-                                <div className='text-green-400 font-extrabold mt-7'>
-                                    <div className="badge badge-outline">ReactJs</div>
-                                    <div className="badge badge-outline">Firebase</div>
-                                    <div className="badge badge-outline">NodeJs</div>
-                                    <div className="badge badge-outline">ExpressJs</div>
-                                    <div className="badge badge-outline">MongoDB</div>
-                                    <div className="badge badge-outline">TailwindCss</div>
-                                    <div className="badge badge-outline">DaisyUI</div>
-                                    <div className="badge badge-outline">Material UI</div>
-                                </div>
-                                <div className="badge badge-outline text-purple-400 p-4 font-extrabold mt-5">Live Link</div>
-                            </div>
-                        </div>
-                        <div className='md:flex lg:flex space-y-reverse mt-6 gap-7'>
-                            <div >
-                                <h2 className='text-3xl'>Fashion Info</h2>
-                                <p className='w-[80%]'>'I utilized a modern stack combining Tailwind CSS for responsive styling, DaisyUI for enhanced UI components, React for dynamic front-end functionality, and Firebase Authentication for secure user authentication. This tech stack allowed me to create a visually appealing and user-friendly portfolio,
-                                    showcasing my skills and projects with seamless authentication powered by Firebase.<Link>Live Link</Link>
-                                </p>
-                                <div className="badge badge-outline text-green-400 font-extrabold mt-5">Completed</div>
-                                <div className='text-green-400 font-extrabold mt-7'>
-                                    <div className="badge badge-outline">ReactJs</div>
-                                    <div className="badge badge-outline">Firebase</div>
-                                    <div className="badge badge-outline">NodeJs</div>
-                                    <div className="badge badge-outline">ExpressJs</div>
-                                    <div className="badge badge-outline">MongoDB</div>
-                                    <div className="badge badge-outline">TailwindCss</div>
-                                    <div className="badge badge-outline">DaisyUI</div>
-                                </div>
-                                <div className="badge badge-outline text-purple-400 p-4 font-extrabold mt-5">Live Link</div>
-                            </div>
+                            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                                <SwiperSlide>
+                                    <div className='lg:flex md:flex text-white font-serif w-full gap-10'>
+                                        <div>
+                                            <img className='w-[96rem] h-[28rem]' src="https://i.ibb.co/tpg6DcB/Screenshot-2023-12-17-022451.png" alt="" />
+                                        </div>
+                                        <div>
+                                            <h2 className='text-white font-bold text-4xl'>Bd Job Hunt</h2>
+                                            <h2 className='text-3xl mt-3'>Technologies i have used</h2>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Fontend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">React</div>
+                                                <div className="badge badge-accent badge-outline">Firebase</div>
+                                                <div className="badge badge-accent badge-outline">Material UI</div>
+                                                <div className="badge badge-accent badge-outline">Tailwind Css</div>
+                                                <div className="badge badge-accent badge-outline">DaisyUI</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Backend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">Express.js</div>
+                                                <div className="badge badge-accent badge-outline">Node.js</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Database</h2>
+                                                <div className="badge badge-accent badge-outline">MongoDB</div>
+                                            </div>
+                                            <div>
+                                                <p className='md:w-[80%] lg:w-[80%] mt-4'>
+                                                    BD Job Hunting' is a mern based project. User can manage his
+                                                    job accourding to his/her skills and apply to the company website. Personalized
+                                                    dashboard for Employers and those people who are looking for job.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='lg:flex md:flex text-white font-serif w-full gap-10'>
+                                        <div>
+                                            <img className='w-[96rem] h-[28rem]' src="https://i.ibb.co/hF8WqjJ/27577819-ravi24-may-8.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <h2 className='text-white font-bold text-4xl'>Blood Donation Managment</h2>
+                                            <h2 className='text-3xl mt-3'>Technologies i have used</h2>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Fontend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">React</div>
+                                                <div className="badge badge-accent badge-outline">Firebase</div>
+                                                <div className="badge badge-accent badge-outline">Material UI</div>
+                                                <div className="badge badge-accent badge-outline">Tailwind Css</div>
+                                                <div className="badge badge-accent badge-outline">DaisyUI</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Backend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">Express.js</div>
+                                                <div className="badge badge-accent badge-outline">Node.js</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Database</h2>
+                                                <div className="badge badge-accent badge-outline">MongoDB</div>
+                                            </div>
+                                            <div>
+                                                <p className='md:w-[80%] lg:w-[80%] mt-4'>
+                                                    Blood Donation Management' is a mern based project.
+                                                    Here user can post a blood donation request and get response.
+                                                    And personalized dashboard for 'Admin and Donor' looking for job.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='lg:flex md:flex text-white font-serif w-full gap-10'>
+                                        <div>
+                                            <img className='w-[96rem] h-[28rem]' src="https://i.ibb.co/vvF87X5/TESTFASHIONScreenshot-2023-12-11-161942.png" alt="" />
+                                        </div>
+                                        <div>
+                                            <h2 className='text-white font-bold text-4xl'>Fashion Info</h2>
+                                            <h2 className='text-3xl mt-3'>Technologies i have used</h2>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Fontend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">React</div>
+                                                <div className="badge badge-accent badge-outline">Firebase</div>
+                                                <div className="badge badge-accent badge-outline">Tailwind Css</div>
+                                                <div className="badge badge-accent badge-outline">DaisyUI</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Backend TechStacks</h2>
+                                                <div className="badge badge-accent badge-outline">Express.js</div>
+                                                <div className="badge badge-accent badge-outline">Node.js</div>
+                                            </div>
+                                            <div>
+                                                <h2 className='text-2xl mt-3'>Database</h2>
+                                                <div className="badge badge-accent badge-outline">MongoDB</div>
+                                            </div>
+                                            <div>
+                                                <p className='md:w-[80%] lg:w-[80%] mt-4'>
+                                                    'I utilized a modern stack combining Tailwind CSS for responsive styling,
+                                                    DaisyUI for enhanced UI components, React for dynamic front-end functionality,
+                                                    and Firebase Authentication for secure user authentication.
+                                                    This tech stack allowed me to create a visually appealing and user-friendly portfolio,
+                                                    showcasing my skills and
+                                                    projects with seamless authentication powered by Firebase.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
 
-
-                            <div>
-                                <img className='h-[87%]' src="https://i.ibb.co/vvF87X5/TESTFASHIONScreenshot-2023-12-11-161942.png" alt="project1" />
-                            </div>
                         </div>
                     </div>
 
-                    <div className='text-center w-[85%] m-auto'>
+                    <div className='text-center w-[85%] m-auto mt-10'>
                         <h2 className='text-3xl'>Contact Me</h2>
                         <form className='' ref={form} onSubmit={sendEmail}>
                             <input className="mt-4 input input-bordered w-full max-w-xs" type="text" placeholder='Name' name="user_name" />
