@@ -15,7 +15,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 const Content = () => {
-    const absolutePath = new URL('../../../assets/Tanvir_Sarkar_Riad.pdf', window.location.href).toString();
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -177,40 +176,73 @@ const Content = () => {
 
                     <div>
                         <h2 className='text-3xl font-normal'>My Projects</h2>
-                        <div className='md:flex lg:flex mt-6'>
+                        <div className='md:flex lg:flex mt-6 bg-pink-500 bg-opacity-30 p-3'>
                             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                                 <SwiperSlide>
-                                    <div className='lg:flex md:flex text-white font-serif w-full gap-10'>
-                                        <div>
-                                            <img className='w-[96rem] h-[28rem]' src="https://i.ibb.co/tpg6DcB/Screenshot-2023-12-17-022451.png" alt="" />
+                                    <div>
+                                        <div className='lg:flex md:flex text-white font-serif w-full gap-10'>
+                                            <div>
+                                                <img className='w-[35rem] h-[28rem]' src="https://i.ibb.co/kmmSdjz/Screenshot-2023-12-30-165207.png" alt="" />
+                                            </div>
+                                            <div className='w-[50%]'>
+                                                <h2 className='text-white font-bold text-4xl'>Bd Job Hunt</h2>
+                                                <h2 className='text-3xl mt-3'>Technologies i have used</h2>
+                                                <div>
+                                                    <h2 className='text-2xl mt-3'>Fontend TechStacks</h2>
+                                                    <div className="badge badge-accent badge-outline">React</div>
+                                                    <div className="badge badge-accent badge-outline">Firebase</div>
+                                                    <div className="badge badge-accent badge-outline">Material UI</div>
+                                                    <div className="badge badge-accent badge-outline">Tailwind Css</div>
+                                                    <div className="badge badge-accent badge-outline">DaisyUI</div>
+                                                </div>
+                                                <div>
+                                                    <h2 className='text-2xl mt-3'>Backend TechStacks</h2>
+                                                    <div className="badge badge-accent badge-outline">Express.js</div>
+                                                    <div className="badge badge-accent badge-outline">Node.js</div>
+                                                </div>
+                                                <div>
+                                                    <h2 className='text-2xl mt-3'>Database</h2>
+                                                    <div className="badge badge-accent badge-outline">MongoDB</div>
+                                                </div>
+                                                <div>
+                                                    <p className='md:w-[80%] lg:w-[100%] mt-4'>
+                                                        BD Job Hunting' is a mern based project. User can manage his
+                                                        job accourding to his/her skills and apply to the company website. Personalized
+                                                        dashboard for Employers and those people who are looking for job.
+                                                    </p>
+
+                                                </div>
+
+
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h2 className='text-white font-bold text-4xl'>Bd Job Hunt</h2>
-                                            <h2 className='text-3xl mt-3'>Technologies i have used</h2>
-                                            <div>
-                                                <h2 className='text-2xl mt-3'>Fontend TechStacks</h2>
-                                                <div className="badge badge-accent badge-outline">React</div>
-                                                <div className="badge badge-accent badge-outline">Firebase</div>
-                                                <div className="badge badge-accent badge-outline">Material UI</div>
-                                                <div className="badge badge-accent badge-outline">Tailwind Css</div>
-                                                <div className="badge badge-accent badge-outline">DaisyUI</div>
-                                            </div>
-                                            <div>
-                                                <h2 className='text-2xl mt-3'>Backend TechStacks</h2>
-                                                <div className="badge badge-accent badge-outline">Express.js</div>
-                                                <div className="badge badge-accent badge-outline">Node.js</div>
-                                            </div>
-                                            <div>
-                                                <h2 className='text-2xl mt-3'>Database</h2>
-                                                <div className="badge badge-accent badge-outline">MongoDB</div>
-                                            </div>
-                                            <div>
-                                                <p className='md:w-[80%] lg:w-[80%] mt-4'>
-                                                    BD Job Hunting' is a mern based project. User can manage his
-                                                    job accourding to his/her skills and apply to the company website. Personalized
-                                                    dashboard for Employers and those people who are looking for job.
-                                                </p>
-                                            </div>
+                                        <div className='w-[100%] mt-3 rounded-md m-auto bg-red-500 p-3 bg-opacity-25'>
+                                            <Marquee>
+                                                <div className=''>
+                                                    <div>
+                                                        <img className='w-[15rem]' src="https://i.ibb.co/kmmSdjz/Screenshot-2023-12-30-165207.png" alt="" />
+                                                    </div>
+                                                    <div>
+                                                        <h2>User can see his/her matched job</h2>
+                                                    </div>
+                                                </div>
+                                                <div className='ml-6'>
+                                                    <div>
+                                                        <img className='w-[15rem]' src="https://i.ibb.co/wLp471V/Screenshot-2024-01-02-130212.png" alt="" />
+                                                    </div>
+                                                    <div>
+                                                        <h2 className='w-[15rem]'>Missing skills and add them</h2>
+                                                    </div>
+                                                </div>
+                                                <div className='ml-6'>
+                                                    <div>
+                                                        <img className='w-[15rem]' src="https://i.ibb.co/kmmSdjz/Screenshot-2023-12-30-165207.png" alt="" />
+                                                    </div>
+                                                    <div>
+                                                        <h2 className='w-[15rem]'>Filter jobs in need</h2>
+                                                    </div>
+                                                </div>
+                                            </Marquee>
                                         </div>
                                     </div>
                                 </SwiperSlide>
